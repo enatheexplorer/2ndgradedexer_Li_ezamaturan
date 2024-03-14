@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Estelle Maturan">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<title>Exercise</title>
+	</head>
+	<body>
+		<script>
+			var a = userPrompt();
+			var b = userPrompt();
+			var c = userPrompt();
+			determineTriangle(a, b, c);
+			
+			function userPrompt() {
+				while (true) {
+					value = parseInt(prompt("Please enter a number."));
+					if (isNaN(value) == false) {
+						return value;
+					}
+					else {
+						window.alert("Sorry, but the value you entered was not a number. Please try again.");
+					}
+				}
+			}
+			
+			function determineTriangle(a, b, c) {
+				if ((a == b)&&(b == c)) {
+					window.alert("Inputted side measurements: " + a + ", " + b + ", and " + c + "\n\nThe triangle is EQUILATERAL.");
+				}
+				else if ((a == b)||(b == c)||(a == c)) {
+					window.alert("Inputted side measurements: " + a + ", " + b + ", and " + c + "\n\nThe triangle is ISOSCELES.");
+				}
+				else {
+					window.alert("Inputted side measurements: " + a + ", " + b + ", and " + c + "\n\nThe triangle is SCALENE.");
+				}
+			}
+		</script>
+	</body>
+</html>
